@@ -1,0 +1,50 @@
+[workspace]
+resolver = "2"
+members = ["crates/oscal", "crates/oscal-metaschema-gen"]
+
+[workspace.package]
+edition      = "2021"
+rust-version = "1.95"
+license      = "MIT OR Apache-2.0"
+repository   = "https://github.com/agentcarousel/oscal-rs"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all      = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+# allow transitive dep version conflicts — not actionable
+multiple_crate_versions = "allow"
+
+[workspace.dependencies]
+# library (oscal crate)
+serde       = { version = "1",    features = ["derive"] }
+serde_json  = "1"
+uuid        = { version = "1",    features = ["serde", "v4"] }
+chrono      = { version = "0.4",  features = ["serde"] }
+url         = { version = "2",    features = ["serde"] }
+
+# generator (oscal-metaschema-gen)
+quick-xml   = { version = "0.37", features = ["serialize"] }
+quote       = "1"
+syn         = { version = "2",    features = ["full"] }
+proc-macro2 = "1"
+prettyplease = "0.2"
+anyhow      = "1"
+clap        = { version = "4",    features = ["derive"] }
+
+# shared
+thiserror   = "2"
+indexmap    = { version = "2",    features = ["serde"] }
+heck        = "0.5"
+
+[profile.release]
+opt-level     = 3
+lto           = "fat"
+codegen-units = 1
+panic         = "abort"
+strip         = true
+
+[profile.dev.package."*"]
+opt-level = 3

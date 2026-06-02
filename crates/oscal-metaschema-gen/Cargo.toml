@@ -1,0 +1,30 @@
+[package]
+name          = "oscal-metaschema-gen"
+version       = "0.1.0"
+edition.workspace     = true
+rust-version.workspace = true
+license.workspace     = true
+repository.workspace  = true
+description   = "Code generator: parses NIST OSCAL Metaschema XML and emits Rust source files into crates/oscal/src/generated/."
+publish       = false
+
+[[bin]]
+name = "oscal-metaschema-gen"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+quick-xml.workspace    = true
+quote.workspace        = true
+syn.workspace          = true
+proc-macro2.workspace  = true
+prettyplease.workspace = true
+anyhow.workspace       = true
+clap.workspace         = true
+thiserror.workspace    = true
+indexmap.workspace     = true
+heck.workspace         = true
+serde.workspace        = true
+serde_json.workspace   = true

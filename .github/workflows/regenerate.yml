@@ -1,0 +1,64 @@
+name: Regenerate Types
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly Monday 03:00 UTC — fetch latest NIST metaschemas and open a PR if changed
+    - cron: "0 3 * * 1"
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Fetch latest NIST OSCAL Metaschemas
+        run: |
+          BASE=https://raw.githubusercontent.com/usnistgov/OSCAL/main/src/metaschema
+          for f in oscal_catalog_metaschema.xml \
+                   oscal_assessment-results_metaschema.xml \
+                   oscal_component_metaschema.xml \
+                   oscal_profile_metaschema.xml \
+                   oscal_ssp_metaschema.xml \
+                   oscal_poam_metaschema.xml \
+                   oscal_assessment-plan_metaschema.xml \
+                   oscal_complete_metaschema.xml \
+                   oscal_metadata_metaschema.xml \
+                   oscal_control-common_metaschema.xml \
+                   oscal_assessment-common_metaschema.xml \
+                   oscal_implementation-common_metaschema.xml; do
+            curl -fsSL "${BASE}/${f}" -o "metaschemas/${f}"
+          done
+
+      - name: Regenerate Rust types
+        run: cargo run -p oscal-metaschema-gen
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open PR if types changed
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "chore: regenerate types from NIST OSCAL metaschema"
+          body: |
+            Automated regeneration of OSCAL types from the latest NIST metaschema files.
+
+            Triggered by weekly schedule or manual dispatch.
+          branch: regen/metaschema-update
+          commit-message: "chore: regenerate types from NIST OSCAL metaschema"
