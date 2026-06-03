@@ -28,10 +28,9 @@ pub struct ImportSsp {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ImportSsp`].
+
+Construct via [`ImportSsp::builder()`], chain setters, then call [`ImportSspBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImportSspBuilder {
@@ -63,7 +62,7 @@ impl ImportSspBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ImportSsp`].
     ///
     /// # Errors
     ///
@@ -104,10 +103,9 @@ pub struct LocalObjective {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`LocalObjective`].
+
+Construct via [`LocalObjective::builder()`], chain setters, then call [`LocalObjectiveBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct LocalObjectiveBuilder {
@@ -160,7 +158,7 @@ impl LocalObjectiveBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`LocalObjective`].
     ///
     /// # Errors
     ///
@@ -202,10 +200,9 @@ pub struct AssessmentMethod {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentMethod`].
+
+Construct via [`AssessmentMethod::builder()`], chain setters, then call [`AssessmentMethodBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentMethodBuilder {
@@ -265,7 +262,7 @@ impl AssessmentMethodBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentMethod`].
     ///
     /// # Errors
     ///
@@ -320,10 +317,9 @@ pub struct Step {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Step`].
+
+Construct via [`Step::builder()`], chain setters, then call [`StepBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct StepBuilder {
@@ -397,7 +393,7 @@ impl StepBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Step`].
     ///
     /// # Errors
     ///
@@ -457,10 +453,9 @@ pub struct Activity {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Activity`].
+
+Construct via [`Activity::builder()`], chain setters, then call [`ActivityBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ActivityBuilder {
@@ -541,7 +536,7 @@ impl ActivityBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Activity`].
     ///
     /// # Errors
     ///
@@ -582,10 +577,9 @@ pub struct Timing {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub timing_choice1: Option<TimingChoice1>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Timing`].
+
+Construct via [`Timing::builder()`], chain setters, then call [`TimingBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct TimingBuilder {
@@ -610,7 +604,7 @@ impl TimingBuilder {
         self.timing_choice1 = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Timing`].
     ///
     /// # Errors
     ///
@@ -637,10 +631,9 @@ pub struct Dependency {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Dependency`].
+
+Construct via [`Dependency::builder()`], chain setters, then call [`DependencyBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct DependencyBuilder {
@@ -672,7 +665,7 @@ impl DependencyBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Dependency`].
     ///
     /// # Errors
     ///
@@ -715,10 +708,9 @@ pub struct AssociatedActivity {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssociatedActivity`].
+
+Construct via [`AssociatedActivity::builder()`], chain setters, then call [`AssociatedActivityBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssociatedActivityBuilder {
@@ -778,7 +770,7 @@ impl AssociatedActivityBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssociatedActivity`].
     ///
     /// # Errors
     ///
@@ -845,10 +837,9 @@ pub struct Task {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Task`].
+
+Construct via [`Task::builder()`], chain setters, then call [`TaskBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct TaskBuilder {
@@ -957,7 +948,7 @@ impl TaskBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Task`].
     ///
     /// # Errors
     ///
@@ -1023,10 +1014,9 @@ pub struct ControlSelection {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ControlSelection`].
+
+Construct via [`ControlSelection::builder()`], chain setters, then call [`ControlSelectionBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ControlSelectionBuilder {
@@ -1086,7 +1076,7 @@ impl ControlSelectionBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ControlSelection`].
     ///
     /// # Errors
     ///
@@ -1136,10 +1126,9 @@ pub struct ControlObjectiveSelection {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ControlObjectiveSelection`].
+
+Construct via [`ControlObjectiveSelection::builder()`], chain setters, then call [`ControlObjectiveSelectionBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ControlObjectiveSelectionBuilder {
@@ -1202,7 +1191,7 @@ impl ControlObjectiveSelectionBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ControlObjectiveSelection`].
     ///
     /// # Errors
     ///
@@ -1247,10 +1236,9 @@ pub struct ReviewedControls {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ReviewedControls`].
+
+Construct via [`ReviewedControls::builder()`], chain setters, then call [`ReviewedControlsBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ReviewedControlsBuilder {
@@ -1310,7 +1298,7 @@ impl ReviewedControlsBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ReviewedControls`].
     ///
     /// # Errors
     ///
@@ -1342,10 +1330,9 @@ pub struct SelectControlById {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub statement_id: Vec<String>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SelectControlById`].
+
+Construct via [`SelectControlById::builder()`], chain setters, then call [`SelectControlByIdBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SelectControlByIdBuilder {
@@ -1377,7 +1364,7 @@ impl SelectControlByIdBuilder {
         self.statement_id.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SelectControlById`].
     ///
     /// # Errors
     ///
@@ -1408,10 +1395,9 @@ pub struct SelectObjectiveById {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SelectObjectiveById`].
+
+Construct via [`SelectObjectiveById::builder()`], chain setters, then call [`SelectObjectiveByIdBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SelectObjectiveByIdBuilder {
@@ -1443,7 +1429,7 @@ impl SelectObjectiveByIdBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SelectObjectiveById`].
     ///
     /// # Errors
     ///
@@ -1474,10 +1460,9 @@ pub struct Source {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Source`].
+
+Construct via [`Source::builder()`], chain setters, then call [`SourceBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SourceBuilder {
@@ -1509,7 +1494,7 @@ impl SourceBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Source`].
     ///
     /// # Errors
     ///
@@ -1552,10 +1537,9 @@ pub struct AssessmentSubjectPlaceholder {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentSubjectPlaceholder`].
+
+Construct via [`AssessmentSubjectPlaceholder::builder()`], chain setters, then call [`AssessmentSubjectPlaceholderBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentSubjectPlaceholderBuilder {
@@ -1615,7 +1599,7 @@ impl AssessmentSubjectPlaceholderBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentSubjectPlaceholder`].
     ///
     /// # Errors
     ///
@@ -1671,10 +1655,9 @@ pub struct AssessmentSubject {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentSubject`].
+
+Construct via [`AssessmentSubject::builder()`], chain setters, then call [`AssessmentSubjectBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentSubjectBuilder {
@@ -1741,7 +1724,7 @@ impl AssessmentSubjectBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentSubject`].
     ///
     /// # Errors
     ///
@@ -1783,10 +1766,9 @@ pub struct SelectSubjectById {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SelectSubjectById`].
+
+Construct via [`SelectSubjectById::builder()`], chain setters, then call [`SelectSubjectByIdBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SelectSubjectByIdBuilder {
@@ -1832,7 +1814,7 @@ impl SelectSubjectByIdBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SelectSubjectById`].
     ///
     /// # Errors
     ///
@@ -1874,10 +1856,9 @@ pub struct SubjectReference {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SubjectReference`].
+
+Construct via [`SubjectReference::builder()`], chain setters, then call [`SubjectReferenceBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SubjectReferenceBuilder {
@@ -1930,7 +1911,7 @@ impl SubjectReferenceBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SubjectReference`].
     ///
     /// # Errors
     ///
@@ -1973,10 +1954,9 @@ pub struct UsesComponent {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`UsesComponent`].
+
+Construct via [`UsesComponent::builder()`], chain setters, then call [`UsesComponentBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct UsesComponentBuilder {
@@ -2029,7 +2009,7 @@ impl UsesComponentBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`UsesComponent`].
     ///
     /// # Errors
     ///
@@ -2075,10 +2055,9 @@ pub struct AssessmentPlatform {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentPlatform`].
+
+Construct via [`AssessmentPlatform::builder()`], chain setters, then call [`AssessmentPlatformBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentPlatformBuilder {
@@ -2138,7 +2117,7 @@ impl AssessmentPlatformBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentPlatform`].
     ///
     /// # Errors
     ///
@@ -2174,10 +2153,9 @@ pub struct AssessmentAssets {
     #[serde(default)]
     pub assessment_platform: Vec<AssessmentPlatform>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentAssets`].
+
+Construct via [`AssessmentAssets::builder()`], chain setters, then call [`AssessmentAssetsBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentAssetsBuilder {
@@ -2209,7 +2187,7 @@ impl AssessmentAssetsBuilder {
         self.assessment_platform.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentAssets`].
     ///
     /// # Errors
     ///
@@ -2240,10 +2218,9 @@ pub struct Status {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Status`].
+
+Construct via [`Status::builder()`], chain setters, then call [`StatusBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct StatusBuilder {
@@ -2282,7 +2259,7 @@ impl StatusBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Status`].
     ///
     /// # Errors
     ///
@@ -2334,10 +2311,9 @@ pub struct FindingTarget {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`FindingTarget`].
+
+Construct via [`FindingTarget::builder()`], chain setters, then call [`FindingTargetBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct FindingTargetBuilder {
@@ -2418,7 +2394,7 @@ impl FindingTargetBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`FindingTarget`].
     ///
     /// # Errors
     ///
@@ -2486,10 +2462,9 @@ pub struct Finding {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Finding`].
+
+Construct via [`Finding::builder()`], chain setters, then call [`FindingBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct FindingBuilder {
@@ -2584,7 +2559,7 @@ impl FindingBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Finding`].
     ///
     /// # Errors
     ///
@@ -2633,10 +2608,9 @@ pub struct RelatedObservation {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`RelatedObservation`].
+
+Construct via [`RelatedObservation::builder()`], chain setters, then call [`RelatedObservationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RelatedObservationBuilder {
@@ -2668,7 +2642,7 @@ impl RelatedObservationBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`RelatedObservation`].
     ///
     /// # Errors
     ///
@@ -2699,10 +2673,9 @@ pub struct AssociatedRisk {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssociatedRisk`].
+
+Construct via [`AssociatedRisk::builder()`], chain setters, then call [`AssociatedRiskBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssociatedRiskBuilder {
@@ -2734,7 +2707,7 @@ impl AssociatedRiskBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssociatedRisk`].
     ///
     /// # Errors
     ///
@@ -2774,10 +2747,9 @@ pub struct RelevantEvidence {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`RelevantEvidence`].
+
+Construct via [`RelevantEvidence::builder()`], chain setters, then call [`RelevantEvidenceBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RelevantEvidenceBuilder {
@@ -2830,7 +2802,7 @@ impl RelevantEvidenceBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`RelevantEvidence`].
     ///
     /// # Errors
     ///
@@ -2895,10 +2867,9 @@ pub struct Observation {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Observation`].
+
+Construct via [`Observation::builder()`], chain setters, then call [`ObservationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ObservationBuilder {
@@ -3007,7 +2978,7 @@ impl ObservationBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Observation`].
     ///
     /// # Errors
     ///
@@ -3056,10 +3027,9 @@ pub struct Origin {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub related_tasks: Vec<RelatedTask>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Origin`].
+
+Construct via [`Origin::builder()`], chain setters, then call [`OriginBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct OriginBuilder {
@@ -3091,7 +3061,7 @@ impl OriginBuilder {
         self.related_tasks.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Origin`].
     ///
     /// # Errors
     ///
@@ -3128,10 +3098,9 @@ pub struct OriginActor {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`OriginActor`].
+
+Construct via [`OriginActor::builder()`], chain setters, then call [`OriginActorBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct OriginActorBuilder {
@@ -3184,7 +3153,7 @@ impl OriginActorBuilder {
         self.links.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`OriginActor`].
     ///
     /// # Errors
     ///
@@ -3221,10 +3190,9 @@ pub struct IdentifiedSubject {
     #[serde(default)]
     pub subjects: Vec<AssessmentSubject>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`IdentifiedSubject`].
+
+Construct via [`IdentifiedSubject::builder()`], chain setters, then call [`IdentifiedSubjectBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct IdentifiedSubjectBuilder {
@@ -3256,7 +3224,7 @@ impl IdentifiedSubjectBuilder {
         self.subjects.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`IdentifiedSubject`].
     ///
     /// # Errors
     ///
@@ -3302,10 +3270,9 @@ pub struct RelatedTask {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`RelatedTask`].
+
+Construct via [`RelatedTask::builder()`], chain setters, then call [`RelatedTaskBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RelatedTaskBuilder {
@@ -3372,7 +3339,7 @@ impl RelatedTaskBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`RelatedTask`].
     ///
     /// # Errors
     ///
@@ -3431,10 +3398,9 @@ pub struct MitigatingFactor {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub subjects: Vec<SubjectReference>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`MitigatingFactor`].
+
+Construct via [`MitigatingFactor::builder()`], chain setters, then call [`MitigatingFactorBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct MitigatingFactorBuilder {
@@ -3494,7 +3460,7 @@ impl MitigatingFactorBuilder {
         self.subjects.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`MitigatingFactor`].
     ///
     /// # Errors
     ///
@@ -3541,10 +3507,9 @@ pub struct RelatedResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`RelatedResponse`].
+
+Construct via [`RelatedResponse::builder()`], chain setters, then call [`RelatedResponseBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RelatedResponseBuilder {
@@ -3597,7 +3562,7 @@ impl RelatedResponseBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`RelatedResponse`].
     ///
     /// # Errors
     ///
@@ -3657,10 +3622,9 @@ pub struct Entry {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Entry`].
+
+Construct via [`Entry::builder()`], chain setters, then call [`EntryBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct EntryBuilder {
@@ -3755,7 +3719,7 @@ impl EntryBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Entry`].
     ///
     /// # Errors
     ///
@@ -3796,10 +3760,9 @@ pub struct RiskLog {
     #[serde(default)]
     pub entry: Vec<Entry>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`RiskLog`].
+
+Construct via [`RiskLog::builder()`], chain setters, then call [`RiskLogBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RiskLogBuilder {
@@ -3822,7 +3785,7 @@ impl RiskLogBuilder {
         self.entry.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`RiskLog`].
     ///
     /// # Errors
     ///
@@ -3882,10 +3845,9 @@ pub struct Risk {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub related_observations: Vec<RelatedObservation>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Risk`].
+
+Construct via [`Risk::builder()`], chain setters, then call [`RiskBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RiskBuilder {
@@ -4008,7 +3970,7 @@ impl RiskBuilder {
         self.related_observations.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Risk`].
     ///
     /// # Errors
     ///
@@ -4067,10 +4029,9 @@ pub struct LoggedBy {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`LoggedBy`].
+
+Construct via [`LoggedBy::builder()`], chain setters, then call [`LoggedByBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct LoggedByBuilder {
@@ -4109,7 +4070,7 @@ impl LoggedByBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`LoggedBy`].
     ///
     /// # Errors
     ///
@@ -4158,10 +4119,9 @@ pub struct Facet {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Facet`].
+
+Construct via [`Facet::builder()`], chain setters, then call [`FacetBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct FacetBuilder {
@@ -4221,7 +4181,7 @@ impl FacetBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Facet`].
     ///
     /// # Errors
     ///
@@ -4268,10 +4228,9 @@ pub struct Characterization {
     #[serde(default)]
     pub facet: Vec<Facet>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Characterization`].
+
+Construct via [`Characterization::builder()`], chain setters, then call [`CharacterizationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct CharacterizationBuilder {
@@ -4317,7 +4276,7 @@ impl CharacterizationBuilder {
         self.facet.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Characterization`].
     ///
     /// # Errors
     ///
@@ -4364,10 +4323,9 @@ pub struct RequiredAsset {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`RequiredAsset`].
+
+Construct via [`RequiredAsset::builder()`], chain setters, then call [`RequiredAssetBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RequiredAssetBuilder {
@@ -4434,7 +4392,7 @@ impl RequiredAssetBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`RequiredAsset`].
     ///
     /// # Errors
     ///
@@ -4494,10 +4452,9 @@ pub struct Response {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Response`].
+
+Construct via [`Response::builder()`], chain setters, then call [`ResponseBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ResponseBuilder {
@@ -4585,7 +4542,7 @@ impl ResponseBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Response`].
     ///
     /// # Errors
     ///
@@ -4654,10 +4611,9 @@ pub struct AssessmentPart {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentPart`].
+
+Construct via [`AssessmentPart::builder()`], chain setters, then call [`AssessmentPartBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentPartBuilder {
@@ -4738,7 +4694,7 @@ impl AssessmentPartBuilder {
         self.links.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentPart`].
     ///
     /// # Errors
     ///
@@ -4797,10 +4753,9 @@ pub struct Part {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Part`].
+
+Construct via [`Part::builder()`], chain setters, then call [`PartBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct PartBuilder {
@@ -4881,7 +4836,7 @@ impl PartBuilder {
         self.links.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Part`].
     ///
     /// # Errors
     ///
@@ -4951,10 +4906,9 @@ pub struct Parameter {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Parameter`].
+
+Construct via [`Parameter::builder()`], chain setters, then call [`ParameterBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ParameterBuilder {
@@ -5049,7 +5003,7 @@ impl ParameterBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Parameter`].
     ///
     /// # Errors
     ///
@@ -5089,10 +5043,9 @@ pub struct Test {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Test`].
+
+Construct via [`Test::builder()`], chain setters, then call [`TestBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct TestBuilder {
@@ -5124,7 +5077,7 @@ impl TestBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Test`].
     ///
     /// # Errors
     ///
@@ -5156,10 +5109,9 @@ pub struct ParameterConstraint {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub test: Vec<Test>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ParameterConstraint`].
+
+Construct via [`ParameterConstraint::builder()`], chain setters, then call [`ParameterConstraintBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ParameterConstraintBuilder {
@@ -5191,7 +5143,7 @@ impl ParameterConstraintBuilder {
         self.test.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ParameterConstraint`].
     ///
     /// # Errors
     ///
@@ -5216,10 +5168,9 @@ pub struct ParameterGuideline {
     ///Prose permits multiple paragraphs, lists, tables etc.
     pub prose: crate::primitives::MarkupMultiline,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ParameterGuideline`].
+
+Construct via [`ParameterGuideline::builder()`], chain setters, then call [`ParameterGuidelineBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ParameterGuidelineBuilder {
@@ -5242,7 +5193,7 @@ impl ParameterGuidelineBuilder {
         self.prose = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ParameterGuideline`].
     ///
     /// # Errors
     ///
@@ -5278,10 +5229,9 @@ pub struct ParameterSelection {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub choice: Vec<crate::primitives::MarkupLine>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ParameterSelection`].
+
+Construct via [`ParameterSelection::builder()`], chain setters, then call [`ParameterSelectionBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ParameterSelectionBuilder {
@@ -5313,7 +5263,7 @@ impl ParameterSelectionBuilder {
         self.choice.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ParameterSelection`].
     ///
     /// # Errors
     ///
@@ -5335,10 +5285,9 @@ impl ParameterSelection {
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub struct IncludeAll {}
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`IncludeAll`].
+
+Construct via [`IncludeAll::builder()`], chain setters, then call [`IncludeAllBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct IncludeAllBuilder {}
@@ -5354,7 +5303,7 @@ impl Default for IncludeAllBuilder {
     }
 }
 impl IncludeAllBuilder {
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`IncludeAll`].
     ///
     /// # Errors
     ///
@@ -5387,10 +5336,9 @@ pub struct Matching {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Matching`].
+
+Construct via [`Matching::builder()`], chain setters, then call [`MatchingBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct MatchingBuilder {
@@ -5422,7 +5370,7 @@ impl MatchingBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Matching`].
     ///
     /// # Errors
     ///
@@ -5468,10 +5416,9 @@ pub struct Revision {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Revision`].
+
+Construct via [`Revision::builder()`], chain setters, then call [`RevisionBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RevisionBuilder {
@@ -5545,7 +5492,7 @@ impl RevisionBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Revision`].
     ///
     /// # Errors
     ///
@@ -5596,10 +5543,9 @@ pub struct Role {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Role`].
+
+Construct via [`Role::builder()`], chain setters, then call [`RoleBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RoleBuilder {
@@ -5666,7 +5612,7 @@ impl RoleBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Role`].
     ///
     /// # Errors
     ///
@@ -5726,10 +5672,9 @@ pub struct Location {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Location`].
+
+Construct via [`Location::builder()`], chain setters, then call [`LocationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct LocationBuilder {
@@ -5810,7 +5755,7 @@ impl LocationBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Location`].
     ///
     /// # Errors
     ///
@@ -5892,10 +5837,9 @@ pub struct Party {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Party`].
+
+Construct via [`Party::builder()`], chain setters, then call [`PartyBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct PartyBuilder {
@@ -5997,7 +5941,7 @@ impl PartyBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Party`].
     ///
     /// # Errors
     ///
@@ -6077,10 +6021,9 @@ pub struct Metadata {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Metadata`].
+
+Construct via [`Metadata::builder()`], chain setters, then call [`MetadataBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct MetadataBuilder {
@@ -6203,7 +6146,7 @@ impl MetadataBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Metadata`].
     ///
     /// # Errors
     ///
@@ -6280,10 +6223,9 @@ pub struct Citation {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub links: Vec<Link>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Citation`].
+
+Construct via [`Citation::builder()`], chain setters, then call [`CitationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct CitationBuilder {
@@ -6322,7 +6264,7 @@ impl CitationBuilder {
         self.links.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Citation`].
     ///
     /// # Errors
     ///
@@ -6357,10 +6299,9 @@ pub struct Rlink {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub hashes: Vec<OscalHash>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Rlink`].
+
+Construct via [`Rlink::builder()`], chain setters, then call [`RlinkBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RlinkBuilder {
@@ -6399,7 +6340,7 @@ impl RlinkBuilder {
         self.hashes.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Rlink`].
     ///
     /// # Errors
     ///
@@ -6465,10 +6406,9 @@ pub struct Resource {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Resource`].
+
+Construct via [`Resource::builder()`], chain setters, then call [`ResourceBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ResourceBuilder {
@@ -6549,7 +6489,7 @@ impl ResourceBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Resource`].
     ///
     /// # Errors
     ///
@@ -6585,10 +6525,9 @@ pub struct BackMatter {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub resource: Vec<Resource>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`BackMatter`].
+
+Construct via [`BackMatter::builder()`], chain setters, then call [`BackMatterBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct BackMatterBuilder {
@@ -6613,7 +6552,7 @@ impl BackMatterBuilder {
         self.resource.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`BackMatter`].
     ///
     /// # Errors
     ///
@@ -6654,10 +6593,9 @@ pub struct Property {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Property`].
+
+Construct via [`Property::builder()`], chain setters, then call [`PropertyBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct PropertyBuilder {
@@ -6724,7 +6662,7 @@ impl PropertyBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Property`].
     ///
     /// # Errors
     ///
@@ -6769,10 +6707,9 @@ pub struct Link {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub text: Option<crate::primitives::MarkupLine>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Link`].
+
+Construct via [`Link::builder()`], chain setters, then call [`LinkBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct LinkBuilder {
@@ -6818,7 +6755,7 @@ impl LinkBuilder {
         self.text = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Link`].
     ///
     /// # Errors
     ///
@@ -6860,10 +6797,9 @@ pub struct ResponsibleParty {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ResponsibleParty`].
+
+Construct via [`ResponsibleParty::builder()`], chain setters, then call [`ResponsiblePartyBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ResponsiblePartyBuilder {
@@ -6916,7 +6852,7 @@ impl ResponsiblePartyBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ResponsibleParty`].
     ///
     /// # Errors
     ///
@@ -6967,10 +6903,9 @@ pub struct Action {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Action`].
+
+Construct via [`Action::builder()`], chain setters, then call [`ActionBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ActionBuilder {
@@ -7044,7 +6979,7 @@ impl ActionBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Action`].
     ///
     /// # Errors
     ///
@@ -7096,10 +7031,9 @@ pub struct ResponsibleRole {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ResponsibleRole`].
+
+Construct via [`ResponsibleRole::builder()`], chain setters, then call [`ResponsibleRoleBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ResponsibleRoleBuilder {
@@ -7152,7 +7086,7 @@ impl ResponsibleRoleBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ResponsibleRole`].
     ///
     /// # Errors
     ///
@@ -7257,10 +7191,9 @@ pub struct Address {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub country: Option<String>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Address`].
+
+Construct via [`Address::builder()`], chain setters, then call [`AddressBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AddressBuilder {
@@ -7313,7 +7246,7 @@ impl AddressBuilder {
         self.country = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Address`].
     ///
     /// # Errors
     ///
@@ -7382,10 +7315,9 @@ pub struct SystemComponent {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SystemComponent`].
+
+Construct via [`SystemComponent::builder()`], chain setters, then call [`SystemComponentBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SystemComponentBuilder {
@@ -7473,7 +7405,7 @@ impl SystemComponentBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SystemComponent`].
     ///
     /// # Errors
     ///
@@ -7528,10 +7460,9 @@ pub struct Protocol {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub port_ranges: Vec<PortRange>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Protocol`].
+
+Construct via [`Protocol::builder()`], chain setters, then call [`ProtocolBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ProtocolBuilder {
@@ -7577,7 +7508,7 @@ impl ProtocolBuilder {
         self.port_ranges.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Protocol`].
     ///
     /// # Errors
     ///
@@ -7614,10 +7545,9 @@ pub struct PortRange {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`PortRange`].
+
+Construct via [`PortRange::builder()`], chain setters, then call [`PortRangeBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct PortRangeBuilder {
@@ -7663,7 +7593,7 @@ impl PortRangeBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`PortRange`].
     ///
     /// # Errors
     ///
@@ -7693,10 +7623,9 @@ pub struct ImplementationStatus {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ImplementationStatus`].
+
+Construct via [`ImplementationStatus::builder()`], chain setters, then call [`ImplementationStatusBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImplementationStatusBuilder {
@@ -7728,7 +7657,7 @@ impl ImplementationStatusBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ImplementationStatus`].
     ///
     /// # Errors
     ///
@@ -7780,10 +7709,9 @@ pub struct SystemUser {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SystemUser`].
+
+Construct via [`SystemUser::builder()`], chain setters, then call [`SystemUserBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SystemUserBuilder {
@@ -7864,7 +7792,7 @@ impl SystemUserBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SystemUser`].
     ///
     /// # Errors
     ///
@@ -7905,10 +7833,9 @@ pub struct AuthorizedPrivilege {
     #[serde(default)]
     pub functions_performed: Vec<String>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AuthorizedPrivilege`].
+
+Construct via [`AuthorizedPrivilege::builder()`], chain setters, then call [`AuthorizedPrivilegeBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AuthorizedPrivilegeBuilder {
@@ -7947,7 +7874,7 @@ impl AuthorizedPrivilegeBuilder {
         self.functions_performed.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AuthorizedPrivilege`].
     ///
     /// # Errors
     ///
@@ -7995,10 +7922,9 @@ pub struct ImplementedComponent {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ImplementedComponent`].
+
+Construct via [`ImplementedComponent::builder()`], chain setters, then call [`ImplementedComponentBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImplementedComponentBuilder {
@@ -8051,7 +7977,7 @@ impl ImplementedComponentBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ImplementedComponent`].
     ///
     /// # Errors
     ///
@@ -8099,10 +8025,9 @@ pub struct InventoryItem {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`InventoryItem`].
+
+Construct via [`InventoryItem::builder()`], chain setters, then call [`InventoryItemBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct InventoryItemBuilder {
@@ -8169,7 +8094,7 @@ impl InventoryItemBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`InventoryItem`].
     ///
     /// # Errors
     ///
@@ -8211,10 +8136,9 @@ pub struct SetParameter {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SetParameter`].
+
+Construct via [`SetParameter::builder()`], chain setters, then call [`SetParameterBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SetParameterBuilder {
@@ -8253,7 +8177,7 @@ impl SetParameterBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SetParameter`].
     ///
     /// # Errors
     ///
@@ -8308,10 +8232,9 @@ pub struct LocalDefinitions {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`LocalDefinitions`].
+
+Construct via [`LocalDefinitions::builder()`], chain setters, then call [`LocalDefinitionsBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct LocalDefinitionsBuilder {
@@ -8371,7 +8294,7 @@ impl LocalDefinitionsBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`LocalDefinitions`].
     ///
     /// # Errors
     ///
@@ -8401,10 +8324,9 @@ pub struct TermsAndConditions {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub parts: Vec<AssessmentPart>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`TermsAndConditions`].
+
+Construct via [`TermsAndConditions::builder()`], chain setters, then call [`TermsAndConditionsBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct TermsAndConditionsBuilder {
@@ -8427,7 +8349,7 @@ impl TermsAndConditionsBuilder {
         self.parts.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`TermsAndConditions`].
     ///
     /// # Errors
     ///
@@ -8473,10 +8395,9 @@ pub struct AssessmentPlan {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub back_matter: Option<BackMatter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentPlan`].
+
+Construct via [`AssessmentPlan::builder()`], chain setters, then call [`AssessmentPlanBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentPlanBuilder {
@@ -8564,7 +8485,7 @@ impl AssessmentPlanBuilder {
         self.back_matter = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentPlan`].
     ///
     /// # Errors
     ///
@@ -8622,10 +8543,9 @@ pub struct AssessmentResults {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub back_matter: Option<BackMatter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentResults`].
+
+Construct via [`AssessmentResults::builder()`], chain setters, then call [`AssessmentResultsBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentResultsBuilder {
@@ -8685,7 +8605,7 @@ impl AssessmentResultsBuilder {
         self.back_matter = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentResults`].
     ///
     /// # Errors
     ///
@@ -8727,10 +8647,9 @@ pub struct Attestation {
     #[serde(default)]
     pub parts: Vec<AssessmentPart>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Attestation`].
+
+Construct via [`Attestation::builder()`], chain setters, then call [`AttestationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AttestationBuilder {
@@ -8762,7 +8681,7 @@ impl AttestationBuilder {
         self.parts.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Attestation`].
     ///
     /// # Errors
     ///
@@ -8788,10 +8707,9 @@ pub struct AssessmentLog {
     #[serde(default)]
     pub entry: Vec<Entry>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AssessmentLog`].
+
+Construct via [`AssessmentLog::builder()`], chain setters, then call [`AssessmentLogBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AssessmentLogBuilder {
@@ -8814,7 +8732,7 @@ impl AssessmentLogBuilder {
         self.entry.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AssessmentLog`].
     ///
     /// # Errors
     ///
@@ -8874,10 +8792,9 @@ pub struct OscalResult {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`OscalResult`].
+
+Construct via [`OscalResult::builder()`], chain setters, then call [`OscalResultBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct OscalResultBuilder {
@@ -9000,7 +8917,7 @@ impl OscalResultBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`OscalResult`].
     ///
     /// # Errors
     ///
@@ -9056,10 +8973,9 @@ pub struct ImportAp {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ImportAp`].
+
+Construct via [`ImportAp::builder()`], chain setters, then call [`ImportApBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImportApBuilder {
@@ -9091,7 +9007,7 @@ impl ImportApBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ImportAp`].
     ///
     /// # Errors
     ///
@@ -9133,10 +9049,9 @@ pub struct Catalog {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub back_matter: Option<BackMatter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Catalog`].
+
+Construct via [`Catalog::builder()`], chain setters, then call [`CatalogBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct CatalogBuilder {
@@ -9196,7 +9111,7 @@ impl CatalogBuilder {
         self.back_matter = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Catalog`].
     ///
     /// # Errors
     ///
@@ -9254,17 +9169,12 @@ pub struct Group {
     ///
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub parts: Vec<Part>,
-    ///Nested sub-groups within this group.
-    #[serde(default, skip_serializing_if = "Vec::is_empty")]
-    pub groups: Vec<Group>,
-    ///Controls within this group.
-    #[serde(default, skip_serializing_if = "Vec::is_empty")]
-    pub controls: Vec<Control>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub group_choice1: Option<GroupChoice1>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Group`].
+
+Construct via [`Group::builder()`], chain setters, then call [`GroupBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct GroupBuilder {
@@ -9275,8 +9185,7 @@ pub struct GroupBuilder {
     props: Vec<Property>,
     links: Vec<Link>,
     parts: Vec<Part>,
-    groups: Vec<Group>,
-    controls: Vec<Control>,
+    group_choice1: Option<GroupChoice1>,
 }
 impl GroupBuilder {
     /// Create an empty builder with all fields unset.
@@ -9289,8 +9198,7 @@ impl GroupBuilder {
             props: Vec::new(),
             links: Vec::new(),
             parts: Vec::new(),
-            groups: Vec::new(),
-            controls: Vec::new(),
+            group_choice1: None,
         }
     }
 }
@@ -9335,17 +9243,12 @@ impl GroupBuilder {
         self.parts.push(v.into());
         self
     }
-    ///Add a sub-group.
-    pub fn groups(mut self, v: impl Into<Group>) -> Self {
-        self.groups.push(v.into());
+    ///Set the `group_choice1` field.
+    pub fn group_choice1(mut self, v: impl Into<GroupChoice1>) -> Self {
+        self.group_choice1 = Some(v.into());
         self
     }
-    ///Add a control.
-    pub fn controls(mut self, v: impl Into<Control>) -> Self {
-        self.controls.push(v.into());
-        self
-    }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Group`].
     ///
     /// # Errors
     ///
@@ -9362,8 +9265,7 @@ impl GroupBuilder {
             props: self.props,
             links: self.links,
             parts: self.parts,
-            groups: self.groups,
-            controls: self.controls,
+            group_choice1: self.group_choice1,
         })
     }
 }
@@ -9400,10 +9302,9 @@ pub struct Control {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub controls: Vec<Control>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Control`].
+
+Construct via [`Control::builder()`], chain setters, then call [`ControlBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ControlBuilder {
@@ -9477,7 +9378,7 @@ impl ControlBuilder {
         self.controls.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Control`].
     ///
     /// # Errors
     ///
@@ -9528,10 +9429,9 @@ pub struct Profile {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub back_matter: Option<BackMatter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Profile`].
+
+Construct via [`Profile::builder()`], chain setters, then call [`ProfileBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ProfileBuilder {
@@ -9591,7 +9491,7 @@ impl ProfileBuilder {
         self.back_matter = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Profile`].
     ///
     /// # Errors
     ///
@@ -9637,10 +9537,9 @@ pub struct Import {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub exclude_controls: Vec<SelectControlById>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Import`].
+
+Construct via [`Import::builder()`], chain setters, then call [`ImportBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImportBuilder {
@@ -9679,7 +9578,7 @@ impl ImportBuilder {
         self.exclude_controls.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Import`].
     ///
     /// # Errors
     ///
@@ -9709,10 +9608,9 @@ pub struct Combine {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub method: Option<String>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Combine`].
+
+Construct via [`Combine::builder()`], chain setters, then call [`CombineBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct CombineBuilder {
@@ -9735,7 +9633,7 @@ impl CombineBuilder {
         self.method = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Combine`].
     ///
     /// # Errors
     ///
@@ -9765,10 +9663,9 @@ pub struct Merge {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub merge_choice1: Option<MergeChoice1>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Merge`].
+
+Construct via [`Merge::builder()`], chain setters, then call [`MergeBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct MergeBuilder {
@@ -9800,7 +9697,7 @@ impl MergeBuilder {
         self.merge_choice1 = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Merge`].
     ///
     /// # Errors
     ///
@@ -9841,10 +9738,9 @@ pub struct Remove {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Remove`].
+
+Construct via [`Remove::builder()`], chain setters, then call [`RemoveBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RemoveBuilder {
@@ -9904,7 +9800,7 @@ impl RemoveBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Remove`].
     ///
     /// # Errors
     ///
@@ -9952,10 +9848,9 @@ pub struct Add {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub parts: Vec<Part>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Add`].
+
+Construct via [`Add::builder()`], chain setters, then call [`AddBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AddBuilder {
@@ -10022,7 +9917,7 @@ impl AddBuilder {
         self.parts.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Add`].
     ///
     /// # Errors
     ///
@@ -10058,10 +9953,9 @@ pub struct Alter {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub add: Vec<Add>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Alter`].
+
+Construct via [`Alter::builder()`], chain setters, then call [`AlterBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AlterBuilder {
@@ -10100,7 +9994,7 @@ impl AlterBuilder {
         self.add.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Alter`].
     ///
     /// # Errors
     ///
@@ -10133,10 +10027,9 @@ pub struct Modify {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub alter: Vec<Alter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Modify`].
+
+Construct via [`Modify::builder()`], chain setters, then call [`ModifyBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ModifyBuilder {
@@ -10168,7 +10061,7 @@ impl ModifyBuilder {
         self.alter.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Modify`].
     ///
     /// # Errors
     ///
@@ -10205,10 +10098,9 @@ pub struct InsertControls {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub exclude_controls: Vec<SelectControlById>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`InsertControls`].
+
+Construct via [`InsertControls::builder()`], chain setters, then call [`InsertControlsBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct InsertControlsBuilder {
@@ -10247,7 +10139,7 @@ impl InsertControlsBuilder {
         self.exclude_controls.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`InsertControls`].
     ///
     /// # Errors
     ///
@@ -10287,10 +10179,9 @@ pub struct ComponentDefinition {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub back_matter: Option<BackMatter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ComponentDefinition`].
+
+Construct via [`ComponentDefinition::builder()`], chain setters, then call [`ComponentDefinitionBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ComponentDefinitionBuilder {
@@ -10350,7 +10241,7 @@ impl ComponentDefinitionBuilder {
         self.back_matter = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ComponentDefinition`].
     ///
     /// # Errors
     ///
@@ -10388,10 +10279,9 @@ pub struct ImportComponentDefinition {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ImportComponentDefinition`].
+
+Construct via [`ImportComponentDefinition::builder()`], chain setters, then call [`ImportComponentDefinitionBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImportComponentDefinitionBuilder {
@@ -10423,7 +10313,7 @@ impl ImportComponentDefinitionBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ImportComponentDefinition`].
     ///
     /// # Errors
     ///
@@ -10476,10 +10366,9 @@ pub struct DefinedComponent {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`DefinedComponent`].
+
+Construct via [`DefinedComponent::builder()`], chain setters, then call [`DefinedComponentBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct DefinedComponentBuilder {
@@ -10567,7 +10456,7 @@ impl DefinedComponentBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`DefinedComponent`].
     ///
     /// # Errors
     ///
@@ -10628,10 +10517,9 @@ pub struct Capability {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Capability`].
+
+Construct via [`Capability::builder()`], chain setters, then call [`CapabilityBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct CapabilityBuilder {
@@ -10705,7 +10593,7 @@ impl CapabilityBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Capability`].
     ///
     /// # Errors
     ///
@@ -10747,10 +10635,9 @@ pub struct IncorporatesComponent {
     ///A description of the component, including information about its function.
     pub description: crate::primitives::MarkupMultiline,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`IncorporatesComponent`].
+
+Construct via [`IncorporatesComponent::builder()`], chain setters, then call [`IncorporatesComponentBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct IncorporatesComponentBuilder {
@@ -10782,7 +10669,7 @@ impl IncorporatesComponentBuilder {
         self.description = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`IncorporatesComponent`].
     ///
     /// # Errors
     ///
@@ -10829,10 +10716,9 @@ pub struct ControlImplementation {
     #[serde(default)]
     pub implemented_requirements: Vec<ImplementedRequirement>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ControlImplementation`].
+
+Construct via [`ControlImplementation::builder()`], chain setters, then call [`ControlImplementationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ControlImplementationBuilder {
@@ -10899,7 +10785,7 @@ impl ControlImplementationBuilder {
         self.implemented_requirements.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ControlImplementation`].
     ///
     /// # Errors
     ///
@@ -10960,10 +10846,9 @@ pub struct ImplementedRequirement {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ImplementedRequirement`].
+
+Construct via [`ImplementedRequirement::builder()`], chain setters, then call [`ImplementedRequirementBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImplementedRequirementBuilder {
@@ -11044,7 +10929,7 @@ impl ImplementedRequirementBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ImplementedRequirement`].
     ///
     /// # Errors
     ///
@@ -11099,10 +10984,9 @@ pub struct Statement {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Statement`].
+
+Construct via [`Statement::builder()`], chain setters, then call [`StatementBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct StatementBuilder {
@@ -11162,7 +11046,7 @@ impl StatementBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Statement`].
     ///
     /// # Errors
     ///
@@ -11210,10 +11094,9 @@ pub struct SystemSecurityPlan {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub back_matter: Option<BackMatter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SystemSecurityPlan`].
+
+Construct via [`SystemSecurityPlan::builder()`], chain setters, then call [`SystemSecurityPlanBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SystemSecurityPlanBuilder {
@@ -11280,7 +11163,7 @@ impl SystemSecurityPlanBuilder {
         self.back_matter = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SystemSecurityPlan`].
     ///
     /// # Errors
     ///
@@ -11331,10 +11214,9 @@ pub struct ImportProfile {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ImportProfile`].
+
+Construct via [`ImportProfile::builder()`], chain setters, then call [`ImportProfileBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImportProfileBuilder {
@@ -11366,7 +11248,7 @@ impl ImportProfileBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ImportProfile`].
     ///
     /// # Errors
     ///
@@ -11435,10 +11317,9 @@ pub struct SystemCharacteristics {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SystemCharacteristics`].
+
+Construct via [`SystemCharacteristics::builder()`], chain setters, then call [`SystemCharacteristicsBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SystemCharacteristicsBuilder {
@@ -11568,7 +11449,7 @@ impl SystemCharacteristicsBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SystemCharacteristics`].
     ///
     /// # Errors
     ///
@@ -11625,10 +11506,9 @@ pub struct Categorization {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub information_type_id: Vec<String>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Categorization`].
+
+Construct via [`Categorization::builder()`], chain setters, then call [`CategorizationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct CategorizationBuilder {
@@ -11660,7 +11540,7 @@ impl CategorizationBuilder {
         self.information_type_id.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Categorization`].
     ///
     /// # Errors
     ///
@@ -11711,10 +11591,9 @@ pub struct InformationType {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub availability_impact: Option<Impact>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`InformationType`].
+
+Construct via [`InformationType::builder()`], chain setters, then call [`InformationTypeBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct InformationTypeBuilder {
@@ -11795,7 +11674,7 @@ impl InformationTypeBuilder {
         self.availability_impact = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`InformationType`].
     ///
     /// # Errors
     ///
@@ -11840,10 +11719,9 @@ pub struct SystemInformation {
     #[serde(default)]
     pub information_type: Vec<InformationType>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SystemInformation`].
+
+Construct via [`SystemInformation::builder()`], chain setters, then call [`SystemInformationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SystemInformationBuilder {
@@ -11882,7 +11760,7 @@ impl SystemInformationBuilder {
         self.information_type.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SystemInformation`].
     ///
     /// # Errors
     ///
@@ -11920,10 +11798,9 @@ pub struct Impact {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub adjustment_justification: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Impact`].
+
+Construct via [`Impact::builder()`], chain setters, then call [`ImpactBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ImpactBuilder {
@@ -11979,7 +11856,7 @@ impl ImpactBuilder {
         self.adjustment_justification = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Impact`].
     ///
     /// # Errors
     ///
@@ -12035,10 +11912,9 @@ pub struct SecurityImpactLevel {
     ///A target-level of availability for the system, based on the sensitivity of information within the system.
     pub security_objective_availability: String,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SecurityImpactLevel`].
+
+Construct via [`SecurityImpactLevel::builder()`], chain setters, then call [`SecurityImpactLevelBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SecurityImpactLevelBuilder {
@@ -12077,7 +11953,7 @@ impl SecurityImpactLevelBuilder {
         self.security_objective_availability = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SecurityImpactLevel`].
     ///
     /// # Errors
     ///
@@ -12135,10 +12011,9 @@ pub struct AuthorizationBoundary {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`AuthorizationBoundary`].
+
+Construct via [`AuthorizationBoundary::builder()`], chain setters, then call [`AuthorizationBoundaryBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct AuthorizationBoundaryBuilder {
@@ -12191,7 +12066,7 @@ impl AuthorizationBoundaryBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`AuthorizationBoundary`].
     ///
     /// # Errors
     ///
@@ -12237,10 +12112,9 @@ pub struct Diagram {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Diagram`].
+
+Construct via [`Diagram::builder()`], chain setters, then call [`DiagramBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct DiagramBuilder {
@@ -12300,7 +12174,7 @@ impl DiagramBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Diagram`].
     ///
     /// # Errors
     ///
@@ -12344,10 +12218,9 @@ pub struct NetworkArchitecture {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`NetworkArchitecture`].
+
+Construct via [`NetworkArchitecture::builder()`], chain setters, then call [`NetworkArchitectureBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct NetworkArchitectureBuilder {
@@ -12400,7 +12273,7 @@ impl NetworkArchitectureBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`NetworkArchitecture`].
     ///
     /// # Errors
     ///
@@ -12443,10 +12316,9 @@ pub struct DataFlow {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`DataFlow`].
+
+Construct via [`DataFlow::builder()`], chain setters, then call [`DataFlowBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct DataFlowBuilder {
@@ -12499,7 +12371,7 @@ impl DataFlowBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`DataFlow`].
     ///
     /// # Errors
     ///
@@ -12545,10 +12417,9 @@ pub struct LeveragedAuthorization {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`LeveragedAuthorization`].
+
+Construct via [`LeveragedAuthorization::builder()`], chain setters, then call [`LeveragedAuthorizationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct LeveragedAuthorizationBuilder {
@@ -12615,7 +12486,7 @@ impl LeveragedAuthorizationBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`LeveragedAuthorization`].
     ///
     /// # Errors
     ///
@@ -12676,10 +12547,9 @@ pub struct SystemImplementation {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`SystemImplementation`].
+
+Construct via [`SystemImplementation::builder()`], chain setters, then call [`SystemImplementationBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SystemImplementationBuilder {
@@ -12746,7 +12616,7 @@ impl SystemImplementationBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`SystemImplementation`].
     ///
     /// # Errors
     ///
@@ -12790,10 +12660,9 @@ pub struct Provided {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Provided`].
+
+Construct via [`Provided::builder()`], chain setters, then call [`ProvidedBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ProvidedBuilder {
@@ -12853,7 +12722,7 @@ impl ProvidedBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Provided`].
     ///
     /// # Errors
     ///
@@ -12905,10 +12774,9 @@ pub struct Responsibility {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Responsibility`].
+
+Construct via [`Responsibility::builder()`], chain setters, then call [`ResponsibilityBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ResponsibilityBuilder {
@@ -12975,7 +12843,7 @@ impl ResponsibilityBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Responsibility`].
     ///
     /// # Errors
     ///
@@ -13027,10 +12895,9 @@ pub struct Export {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Export`].
+
+Construct via [`Export::builder()`], chain setters, then call [`ExportBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ExportBuilder {
@@ -13090,7 +12957,7 @@ impl ExportBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Export`].
     ///
     /// # Errors
     ///
@@ -13133,10 +13000,9 @@ pub struct Inherited {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub responsible_roles: Vec<ResponsibleRole>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Inherited`].
+
+Construct via [`Inherited::builder()`], chain setters, then call [`InheritedBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct InheritedBuilder {
@@ -13196,7 +13062,7 @@ impl InheritedBuilder {
         self.responsible_roles.push(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Inherited`].
     ///
     /// # Errors
     ///
@@ -13248,10 +13114,9 @@ pub struct Satisfied {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`Satisfied`].
+
+Construct via [`Satisfied::builder()`], chain setters, then call [`SatisfiedBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct SatisfiedBuilder {
@@ -13318,7 +13183,7 @@ impl SatisfiedBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`Satisfied`].
     ///
     /// # Errors
     ///
@@ -13385,10 +13250,9 @@ pub struct ByComponent {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`ByComponent`].
+
+Construct via [`ByComponent::builder()`], chain setters, then call [`ByComponentBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct ByComponentBuilder {
@@ -13490,7 +13354,7 @@ impl ByComponentBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`ByComponent`].
     ///
     /// # Errors
     ///
@@ -13560,10 +13424,9 @@ pub struct PlanOfActionAndMilestones {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub back_matter: Option<BackMatter>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`PlanOfActionAndMilestones`].
+
+Construct via [`PlanOfActionAndMilestones::builder()`], chain setters, then call [`PlanOfActionAndMilestonesBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct PlanOfActionAndMilestonesBuilder {
@@ -13651,7 +13514,7 @@ impl PlanOfActionAndMilestonesBuilder {
         self.back_matter = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`PlanOfActionAndMilestones`].
     ///
     /// # Errors
     ///
@@ -13693,10 +13556,9 @@ pub struct RelatedFinding {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`RelatedFinding`].
+
+Construct via [`RelatedFinding::builder()`], chain setters, then call [`RelatedFindingBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct RelatedFindingBuilder {
@@ -13728,7 +13590,7 @@ impl RelatedFindingBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`RelatedFinding`].
     ///
     /// # Errors
     ///
@@ -13782,10 +13644,9 @@ pub struct PoamItem {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub remarks: Option<crate::primitives::MarkupMultiline>,
 }
-/// Builder for [`#struct_name`].
-///
-/// Construct via [`#struct_name::builder()`], chain setters, then call
-/// [`#builder_name::build()`].
+/**Builder for [`PoamItem`].
+
+Construct via [`PoamItem::builder()`], chain setters, then call [`PoamItemBuilder::build()`].*/
 #[must_use]
 #[derive(Debug)]
 pub struct PoamItemBuilder {
@@ -13873,7 +13734,7 @@ impl PoamItemBuilder {
         self.remarks = Some(v.into());
         self
     }
-    /// Consume the builder and return a fully constructed [`#struct_name`].
+    ///Consume the builder and return a fully constructed [`PoamItem`].
     ///
     /// # Errors
     ///

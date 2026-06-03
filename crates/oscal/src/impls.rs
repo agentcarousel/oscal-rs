@@ -44,10 +44,19 @@ fn collect_controls<'a>(control: &'a Control, out: &mut Vec<&'a Control>) {
 }
 
 fn collect_group_controls<'a>(group: &'a Group, out: &mut Vec<&'a Control>) {
-    for c in &group.controls {
-        collect_controls(c, out);
-    }
-    for g in &group.groups {
-        collect_group_controls(g, out);
+    use crate::generated::types::GroupChoice1;
+    if let Some(choice) = &group.group_choice1 {
+        match choice {
+            GroupChoice1::Control(controls) => {
+                for c in controls {
+                    collect_controls(c, out);
+                }
+            }
+            GroupChoice1::Group(groups) => {
+                for g in groups {
+                    collect_group_controls(g, out);
+                }
+            }
+        }
     }
 }

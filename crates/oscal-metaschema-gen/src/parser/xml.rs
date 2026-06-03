@@ -500,9 +500,6 @@ impl<'src> MetaschemaParser<'src> {
                     if depth == 0 && local_name_end(&e) == tag {
                         break;
                     }
-                    if depth == 0 {
-                        break;
-                    }
                 }
                 Event::Eof => break,
                 _ => {}

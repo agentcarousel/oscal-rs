@@ -90,12 +90,18 @@ pub fn gen_builder(def: &AssemblyDef, db: &IrDb) -> TokenStream {
         })
         .collect();
 
-    // BuildError is emitted once per module by gen_module; builders just reference it.
+    // Build doc strings with the actual type names. Doc comments inside quote! are
+    // treated as string literals and do NOT interpolate proc-macro2 Ident variables,
+    // so we construct the strings explicitly and emit them via #[doc = ...].
+    let sn = struct_name.to_string();
+    let bn = builder_name.to_string();
+    let builder_doc = format!(
+        "Builder for [`{sn}`].\n\nConstruct via [`{sn}::builder()`], chain setters, then call [`{bn}::build()`].",
+    );
+    let build_doc = format!("Consume the builder and return a fully constructed [`{sn}`].");
+
     quote! {
-        /// Builder for [`#struct_name`].
-        ///
-        /// Construct via [`#struct_name::builder()`], chain setters, then call
-        /// [`#builder_name::build()`].
+        #[doc = #builder_doc]
         #[must_use]
         #[derive(Debug)]
         pub struct #builder_name {
@@ -119,7 +125,7 @@ pub fn gen_builder(def: &AssemblyDef, db: &IrDb) -> TokenStream {
 
             #(#setters)*
 
-            /// Consume the builder and return a fully constructed [`#struct_name`].
+            #[doc = #build_doc]
             ///
             /// # Errors
             ///
@@ -200,7 +206,7 @@ fn collect_builder_fields(def: &AssemblyDef, db: &IrDb) -> Vec<BuilderField> {
                             format_ident!("{}", sanitize_type_name(&fd.name.to_upper_camel_case()));
                         quote! { #t }
                     }
-                } else if r.name == "remarks" {
+                } else if r.name == "remarks" || r.name.contains("prose") {
                     quote! { crate::primitives::MarkupMultiline }
                 } else {
                     quote! { String }
