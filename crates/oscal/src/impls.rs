@@ -3,7 +3,7 @@
 //! The code generator emits data types and builders; domain-specific traversal
 //! methods live here so they survive metaschema regeneration.
 
-use crate::generated::types::{Catalog, Control, Group, GroupChoice1};
+use crate::generated::types::{Catalog, Control, Group};
 
 impl Catalog {
     /// Returns every control in the catalog, flattening groups and nested
@@ -44,18 +44,10 @@ fn collect_controls<'a>(control: &'a Control, out: &mut Vec<&'a Control>) {
 }
 
 fn collect_group_controls<'a>(group: &'a Group, out: &mut Vec<&'a Control>) {
-    if let Some(choice) = &group.group_choice1 {
-        match choice {
-            GroupChoice1::Group(groups) => {
-                for g in groups {
-                    collect_group_controls(g, out);
-                }
-            }
-            GroupChoice1::Control(controls) => {
-                for c in controls {
-                    collect_controls(c, out);
-                }
-            }
-        }
+    for c in &group.controls {
+        collect_controls(c, out);
+    }
+    for g in &group.groups {
+        collect_group_controls(g, out);
     }
 }

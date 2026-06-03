@@ -9254,8 +9254,12 @@ pub struct Group {
     ///
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub parts: Vec<Part>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub group_choice1: Option<GroupChoice1>,
+    ///Nested sub-groups within this group.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub groups: Vec<Group>,
+    ///Controls within this group.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub controls: Vec<Control>,
 }
 /// Builder for [`#struct_name`].
 ///
@@ -9271,7 +9275,8 @@ pub struct GroupBuilder {
     props: Vec<Property>,
     links: Vec<Link>,
     parts: Vec<Part>,
-    group_choice1: Option<GroupChoice1>,
+    groups: Vec<Group>,
+    controls: Vec<Control>,
 }
 impl GroupBuilder {
     /// Create an empty builder with all fields unset.
@@ -9284,7 +9289,8 @@ impl GroupBuilder {
             props: Vec::new(),
             links: Vec::new(),
             parts: Vec::new(),
-            group_choice1: None,
+            groups: Vec::new(),
+            controls: Vec::new(),
         }
     }
 }
@@ -9329,9 +9335,14 @@ impl GroupBuilder {
         self.parts.push(v.into());
         self
     }
-    ///Set the `group_choice1` field.
-    pub fn group_choice1(mut self, v: impl Into<GroupChoice1>) -> Self {
-        self.group_choice1 = Some(v.into());
+    ///Add a sub-group.
+    pub fn groups(mut self, v: impl Into<Group>) -> Self {
+        self.groups.push(v.into());
+        self
+    }
+    ///Add a control.
+    pub fn controls(mut self, v: impl Into<Control>) -> Self {
+        self.controls.push(v.into());
         self
     }
     /// Consume the builder and return a fully constructed [`#struct_name`].
@@ -9351,7 +9362,8 @@ impl GroupBuilder {
             props: self.props,
             links: self.links,
             parts: self.parts,
-            group_choice1: self.group_choice1,
+            groups: self.groups,
+            controls: self.controls,
         })
     }
 }
