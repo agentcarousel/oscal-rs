@@ -19,6 +19,13 @@ impl Catalog {
         }
         out
     }
+
+    /// Returns the control with the given `id`, searching the whole catalog
+    /// (including nested groups and control enhancements).
+    #[must_use]
+    pub fn find_control(&self, id: &str) -> Option<&Control> {
+        self.all_controls().into_iter().find(|c| c.id == id)
+    }
 }
 
 impl Control {
@@ -44,19 +51,21 @@ fn collect_controls<'a>(control: &'a Control, out: &mut Vec<&'a Control>) {
 }
 
 fn collect_group_controls<'a>(group: &'a Group, out: &mut Vec<&'a Control>) {
-    use crate::generated::types::GroupChoice1;
-    if let Some(choice) = &group.group_choice1 {
-        match choice {
-            GroupChoice1::Control(controls) => {
-                for c in controls {
-                    collect_controls(c, out);
-                }
-            }
-            GroupChoice1::Group(groups) => {
-                for g in groups {
-                    collect_group_controls(g, out);
-                }
-            }
-        }
+    for c in &group.controls {
+        collect_controls(c, out);
+    }
+    for g in &group.groups {
+        collect_group_controls(g, out);
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn find_control_locates_a_nested_control_by_id() {
+        let catalog = crate::load_catalog("nist-800-171").unwrap();
+        let control = catalog.find_control("SP_800_171_03.01.01").unwrap();
+        assert_eq!(control.id, "SP_800_171_03.01.01");
+        assert!(catalog.find_control("does-not-exist").is_none());
     }
 }

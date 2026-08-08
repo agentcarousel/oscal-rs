@@ -46,6 +46,19 @@ pub use primitives::{MarkupLine, MarkupMultiline, UriReference};
 pub fn load_catalog(name: &str) -> Result<Catalog, String> {
     let json = catalogs::embedded_catalog_json(name)
         .ok_or_else(|| format!("unknown embedded catalog '{name}'"))?;
+    load_catalog_from_str(json)
+}
+
+/// Parse an OSCAL catalog document from a JSON string.
+///
+/// Unlike [`load_catalog`], this accepts any OSCAL catalog JSON, not just the
+/// catalogs embedded in this crate — use it to load catalogs read from disk,
+/// a network call, or any other external source.
+///
+/// # Errors
+///
+/// Returns an error string if `json` is not a valid OSCAL catalog document.
+pub fn load_catalog_from_str(json: &str) -> Result<Catalog, String> {
     let doc: CatalogDoc =
         serde_json::from_str(json).map_err(|e| format!("catalog parse error: {e}"))?;
     Ok(doc.catalog)
@@ -54,4 +67,21 @@ pub fn load_catalog(name: &str) -> Result<Catalog, String> {
 #[derive(serde::Deserialize)]
 struct CatalogDoc {
     catalog: Catalog,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn load_catalog_from_str_parses_external_json() {
+        let json = catalogs::embedded_catalog_json("hipaa").unwrap();
+        let catalog = load_catalog_from_str(json).unwrap();
+        assert!(!catalog.all_controls().is_empty());
+    }
+
+    #[test]
+    fn load_catalog_from_str_rejects_invalid_json() {
+        assert!(load_catalog_from_str("not json").is_err());
+    }
 }

@@ -9139,12 +9139,6 @@ impl Catalog {
         CatalogBuilder::new()
     }
 }
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
-#[serde(untagged)]
-pub enum GroupChoice1 {
-    Group(Vec<Group>),
-    Control(Vec<Control>),
-}
 ///A group of controls, or of groups of controls.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "kebab-case")]
@@ -9169,8 +9163,12 @@ pub struct Group {
     ///
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub parts: Vec<Part>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub group_choice1: Option<GroupChoice1>,
+    ///
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub controls: Vec<Control>,
+    ///
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub groups: Vec<Group>,
 }
 /**Builder for [`Group`].
 
@@ -9185,7 +9183,8 @@ pub struct GroupBuilder {
     props: Vec<Property>,
     links: Vec<Link>,
     parts: Vec<Part>,
-    group_choice1: Option<GroupChoice1>,
+    controls: Vec<Control>,
+    groups: Vec<Group>,
 }
 impl GroupBuilder {
     /// Create an empty builder with all fields unset.
@@ -9198,7 +9197,8 @@ impl GroupBuilder {
             props: Vec::new(),
             links: Vec::new(),
             parts: Vec::new(),
-            group_choice1: None,
+            controls: Vec::new(),
+            groups: Vec::new(),
         }
     }
 }
@@ -9243,9 +9243,14 @@ impl GroupBuilder {
         self.parts.push(v.into());
         self
     }
-    ///Set the `group_choice1` field.
-    pub fn group_choice1(mut self, v: impl Into<GroupChoice1>) -> Self {
-        self.group_choice1 = Some(v.into());
+    ///Set the `controls` field.
+    pub fn controls(mut self, v: impl Into<Control>) -> Self {
+        self.controls.push(v.into());
+        self
+    }
+    ///Set the `groups` field.
+    pub fn groups(mut self, v: impl Into<Group>) -> Self {
+        self.groups.push(v.into());
         self
     }
     ///Consume the builder and return a fully constructed [`Group`].
@@ -9265,7 +9270,8 @@ impl GroupBuilder {
             props: self.props,
             links: self.links,
             parts: self.parts,
-            group_choice1: self.group_choice1,
+            controls: self.controls,
+            groups: self.groups,
         })
     }
 }
