@@ -2,7 +2,7 @@
 //!
 //! These catalog JSON files are compiled into the binary via [`include_str!`].
 //! Load any catalog by passing its short name to [`embedded_catalog_json`] or
-//! [`crate::generated::catalog::load_catalog`].
+//! [`crate::load_catalog`].
 //!
 //! # Embedded catalogs
 //!
@@ -23,8 +23,7 @@
 /// default); building with `--no-default-features --features <name>` embeds
 /// only that catalog's JSON, shrinking the binary.
 ///
-/// Pass any of these to [`embedded_catalog_json`] or
-/// [`crate::generated::catalog::load_catalog`] via `CatalogSource::Embedded`.
+/// Pass any of these to [`embedded_catalog_json`] or [`crate::load_catalog`].
 pub const EMBEDDED_CATALOG_NAMES: &[&str] = &[
     #[cfg(feature = "eu-ai-act")]
     "eu-ai-act",
