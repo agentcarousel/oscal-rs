@@ -1,5 +1,33 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- A Cargo feature per embedded catalog, named after it (`eu-ai-act`, `nist-ai-rmf`, `iso-42001`,
+  `hipaa`, `fda-samd`, `nist-800-207`, `nist-800-171`, `nist-800-172`), all on by default. The
+  features choose which catalogs `available()` lists. Every catalog's JSON is still compiled
+  into the binary, whatever features are enabled.
+- `EMBEDDED_CATALOGS` and `available()`: the embedded catalogs, for catalog pickers.
+- `Catalog::find_control`: look up one control by id.
+- `load_catalog_from_str`: parse catalog JSON from a string.
+
+### Changed
+
+- Builder documentation names the struct each builder produces.
+
+### Fixed
+
+- Broken intra-doc links in `catalogs.rs`.
+
+## 0.1.1 — 2026-06-03
+
+### Fixed
+
+- `Group` has flat `controls` and `groups` fields, matching OSCAL's JSON. 0.1.0 modelled them as
+  a `group_choice1` enum that never deserialized, so `Catalog::all_controls()` missed every
+  control nested in a group.
+
 ## 0.1.0 — 2026-06-02
 
 Initial release. Extracted from [agentcarousel](https://github.com/agentcarousel/agentcarousel).
