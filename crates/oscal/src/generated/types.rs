@@ -9139,6 +9139,18 @@ impl Catalog {
         CatalogBuilder::new()
     }
 }
+/// Unused since 0.1.1, when [`Group`] gained flat `controls` and `groups` fields.
+/// Kept so that 0.1.x stays semver-compatible; removed in 0.2.
+#[deprecated(
+    since = "0.1.2",
+    note = "unused: Group has flat `controls` and `groups` fields"
+)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum GroupChoice1 {
+    Group(Vec<Group>),
+    Control(Vec<Control>),
+}
 ///A group of controls, or of groups of controls.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "kebab-case")]
