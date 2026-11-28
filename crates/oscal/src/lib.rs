@@ -77,7 +77,7 @@ mod tests {
     fn load_catalog_from_str_parses_external_json() {
         let json = catalogs::embedded_catalog_json("hipaa").unwrap();
         let catalog = load_catalog_from_str(json).unwrap();
-        assert!(!catalog.all_controls().is_empty());
+        assert_ne!(catalog.all_controls().len(), 0);
     }
 
     #[test]
