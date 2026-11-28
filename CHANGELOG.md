@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.1.2 — 2026-11-28
+
 ### Added
 
 - A Cargo feature per embedded catalog, named after it (`eu-ai-act`, `nist-ai-rmf`, `iso-42001`,
@@ -16,8 +18,16 @@
 
 - Builder documentation names the struct each builder produces.
 
+### Deprecated
+
+- `generated::types::GroupChoice1`. Nothing has used it since 0.1.1 gave `Group` flat `controls`
+  and `groups` fields. It will be removed in 0.2.
+
 ### Fixed
 
+- **ISO/IEC 42001 catalog:** control numbering and titles now match the official Annex A,
+  including A.4.1, A.6.1.5 and A.6.2.4 (event logs).
+- **EU AI Act catalog:** the Article 9 testing citations and the Annex IV references are corrected.
 - Broken intra-doc links in `catalogs.rs`.
 
 ## 0.1.1 — 2026-06-03
